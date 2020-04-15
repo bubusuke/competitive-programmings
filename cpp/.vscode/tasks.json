@@ -1,0 +1,21 @@
+{
+    "tasks": [
+        {
+            "label": "g++ compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-O0",
+                "${workspaceFolder}/${fileBasename}",
+                "-o",
+                "${workspaceFolder}/output.out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

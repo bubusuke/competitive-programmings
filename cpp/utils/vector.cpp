@@ -9,6 +9,22 @@
 
 using namespace std;
 
+template <typename T>
+vector<T> joinVectors(vector<T> beAdded, vector<T>addTo){
+  for(auto v : addTo){
+      beAdded.push_back(v);
+  }
+  return beAdded;
+}
+
+template <typename T>
+void printVector(vector<T> v){
+  for(int i=0; i<v.size(); i++){
+    cout << v[i] ;
+    if(i != v.size()-1) cout << ",";
+  }
+  cout << endl;
+}
 
 int main() {
 

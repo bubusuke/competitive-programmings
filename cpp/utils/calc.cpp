@@ -13,3 +13,9 @@ int sample2(){
     int a, b;
     return (a + b - 1) / b ; 
 }
+
+//初項ini, 項差diff, 項数numの等差数列の和
+long sumUp(long ini, long diff, long num){
+  	return num  * (2*ini + (num-1)*diff)/ 2;
+}
+

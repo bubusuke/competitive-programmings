@@ -2,6 +2,7 @@
 #include <bitset>
 using namespace std;
 
+//★★以下のi番目は1から始まる。0番目はない。★★
 //ビット bit に i 番目のフラグが立っているかどうか  if (bit & (1<<i))
 //ビット bit に i 番目のフラグが消えているかどうか  if (!(bit & (1<<i)))
 //ビット bit に i 番目のフラグを立てる              bit｜= (1<<i)

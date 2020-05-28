@@ -1,9 +1,15 @@
-#include <iostream>
-#include <algorithm>
-#include <string>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
+
+string toUpper(string s){
+  transform(s.cbegin(), s.cend(), s.begin(), ::toupper);
+  return s;
+}
+string toLower(string s){
+  transform(s.cbegin(), s.cend(), s.begin(), ::tolower);
+  return s;
+}
 
 int main() {
 

@@ -9,7 +9,9 @@ int sample(){
 
 template <typename T>
 T modMinus(T a, T b, T mod) {
-  return (a>b)? (a-b)%mod: modMinus(mod+a, b, mod);
+  a %= mod;
+  b %= mod;
+  return (a>b)? (a-b)%mod: (mod+a-b)%mod;
 }
 
 template <typename T>

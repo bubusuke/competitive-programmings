@@ -11,6 +11,22 @@ string toLower(string s){
   return s;
 }
 
+vector<string> split(string s, char delim){
+  int startIdx=0;
+  int len = 0;
+  vector<string> ret;
+  for (int i = 0; i < (int)s.size(); i++) {
+    if(s[i]==delim){
+      if (len != 0) ret.push_back(s.substr(startIdx, len));
+      startIdx=i+1;
+      len=0;
+    }
+    len++;
+  }
+  if (len!=0) ret.push_back(s.substr(startIdx, len));
+  return ret;
+}
+
 int main() {
 
     // string -> int

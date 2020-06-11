@@ -1,11 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//累乗
-#include <math.h>
-int sample(){
-    return pow(2, 3); //2^3
-}
+//  long mod =  1e9+7;   10^9+7を意味する
 
 template <typename T>
 T modMinus(T a, T b, T mod) {
@@ -54,18 +50,29 @@ T Combination(T n, T k) {
   return val;
 }
 
-//  long mod =  1e9+7;   10^9+7を意味する
+//最大公約数
+template <typename T>
+T gcd(T a, T b) {
+   if (a%b == 0) return b;
+   return gcd(b, a%b);
+}
+
+//最小公倍数
+template <typename T>
+T lcm(T a, T b) {
+   return (a / gcd(a, b)) * b ;
+}
 
 
-//a が b で割り切れるとき: a/b
-//a が b で割り切れないとき: a/b + 1
-int sample2(){
-    int a, b;
-    return (a + b - 1) / b ;
+//num が den で割り切れないとき: a/b に+1する
+template <typename T>
+T roundUpDiv(T num, T den){
+    return (num-1)/den+1;
 }
 
 //初項ini, 項差diff, 項数numの等差数列の和
-long sumUp(long ini, long diff, long num){
-  	return num  * (2*ini + (num-1)*diff)/ 2;
+template <typename T>
+T sumUpArithmeticProgression(T ini, T diff, T num){
+  	return num  * ((T)2*ini + (num-(T)1)*diff)/ (T)2;
 }
 

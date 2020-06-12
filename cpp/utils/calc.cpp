@@ -29,7 +29,6 @@ template <typename T>
 T modComb(T n, T k, T mod) {
   T num = (T)1; //numerator
   T den = (T)1; //denominator
-  if (k > n-k) k = n-k;
   for (T i = 1; i <= k; i++) {
     num *= (n-i+(T)1);
     num %= mod;

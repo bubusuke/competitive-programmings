@@ -1,1 +1,1 @@
-This page is for competitive-programmings, such as Atcoder.
+This page is memos of competitive-programmings, such as Atcoder, for myself.
